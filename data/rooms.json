@@ -1,0 +1,275 @@
+[
+  {
+    "_id": "65a2682b55ead67f8393335f",
+    "photo": "https://picsum.photos/seed/yqbNzqH32/640/480",
+    "room": "Double Superior ",
+    "bed": "C-2",
+    "facilities": [
+      "Expert Team",
+      "Kitchen",
+      "Shop near",
+      "Air conditioner",
+      "Shower",
+      "High speed WiFi",
+      "Strong Locker"
+    ],
+    "description": "Tredecim traho cohaero in. Conforto cedo vos colo placeat blandior atqui conatus. Pax tenetur cupiditate placeat ea tutamen vester.",
+    "price": 296,
+    "discount": 0,
+    "cancel": "Arma arbustum qui bellicus sed vindico viscus tribuo.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2682f55ead67f83933361",
+    "photo": "https://picsum.photos/seed/wOjS7p/640/480",
+    "room": "Single Bed",
+    "bed": "R-33",
+    "facilities": [
+      "Cleaning",
+      "Shower",
+      "High speed WiFi",
+      "Air conditioner"
+    ],
+    "description": "Speciosus qui trepide. Similique alienus cunae. Arx attero velut accusamus arbustum.",
+    "price": 200,
+    "discount": 25,
+    "cancel": "Tergiversatio cultura utor aeneus corona illum tracto creber.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683055ead67f83933363",
+    "photo": "https://picsum.photos/seed/97O949W4/640/480",
+    "room": "Suite",
+    "bed": "I-27",
+    "facilities": [
+      "High speed WiFi",
+      "Strong Locker",
+      "Grocery",
+      "Breakfast",
+      "Towels"
+    ],
+    "description": "Vere tamen defungo sollers apparatus demens adsuesco attonbitus. Ultra summopere repellendus ratione tripudio. Vitiosus arguo armarium cinis vere amplitudo caelum decipio.",
+    "price": 183,
+    "discount": 0,
+    "cancel": "Peccatus laborum currus corona curtus illum totam.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683155ead67f83933365",
+    "photo": "https://picsum.photos/seed/HbtELr3d/640/480",
+    "room": "Double Superior",
+    "bed": "T-41",
+    "facilities": [
+      "Shop near",
+      "Grocery",
+      "Breakfast"
+    ],
+    "description": "Architecto conatus aspernatur armarium laudantium odio. Aspernatur ait fugiat tenus carbo. Dicta studio theca decet collum alioqui.",
+    "price": 222,
+    "discount": 15,
+    "cancel": "Vesica a sapiente.",
+    "status": "booked"
+  },
+  {
+    "_id": "65a2683255ead67f83933367",
+    "photo": "https://picsum.photos/seed/9KEmSo31VM/640/480",
+    "room": "Single Bed",
+    "bed": "G-28",
+    "facilities": [
+      "24/7 Online Support",
+      "Single bed",
+      "Shop near",
+      "Air conditioner",
+      "Strong Locker",
+      "Cleaning"
+    ],
+    "description": "Sapiente quidem defero absum derideo deprimo. Decretum copiose et baiulus cohors contra atrox cibus corporis. At comitatus demonstro bene balbus volubilis soluta.",
+    "price": 191,
+    "discount": 15,
+    "cancel": "Defleo desipio pel animus.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683355ead67f83933369",
+    "photo": "https://picsum.photos/seed/heiUWD/640/480",
+    "room": "Suite",
+    "bed": "V-50",
+    "facilities": [
+      "Smart Security",
+      "Shop near",
+      "High speed WiFi",
+      "Single bed",
+      "Cleaning",
+      "Strong Locker"
+    ],
+    "description": "Textilis acidus congregatio blandior commodo basium facilis dolorem audacia. Error vulticulus abduco autus caecus stabilis reprehenderit absque. Angustus vespillo pariatur quos quo auctus aspernatur.",
+    "price": 242,
+    "discount": 15,
+    "cancel": "Suscipio nemo perferendis tabella tabernus creptio.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683355ead67f8393336b",
+    "photo": "https://picsum.photos/seed/l2Z5Bx9tzm/640/480",
+    "room": "Suite",
+    "bed": "O-15",
+    "facilities": [
+      "Kitchen",
+      "Shower",
+      "Expert Team",
+      "Shop near",
+      "Single bed",
+      "Smart Security"
+    ],
+    "description": "Demens vereor velit ventus adversus sortitus videlicet substantia. Turbo deserunt aggero eveniet coniecto baiulus ustulo culpo. Ad tot demonstro dolorum antiquus id aveho paens voluptate conqueror.",
+    "price": 196,
+    "discount": 30,
+    "cancel": "Vindico tibi accommodo totus adipiscor patior vitium vos alveus.",
+    "status": "booked"
+  },
+  {
+    "_id": "65a2683455ead67f8393336d",
+    "photo": "https://picsum.photos/seed/zz1upgb/640/480",
+    "room": "Double Bed",
+    "bed": "S-27",
+    "facilities": [
+      "Strong Locker",
+      "Kitchen",
+      "High speed WiFi",
+      "Smart Security"
+    ],
+    "description": "Denuo altus verecundia comedo terebro. Derideo ultra bellicus amplitudo assentator admoveo impedit sit. Ventito titulus via adduco colo tredecim absens.",
+    "price": 151,
+    "discount": 25,
+    "cancel": "Minima ut assumenda suadeo cubitum.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683555ead67f8393336f",
+    "photo": "https://picsum.photos/seed/dq3H25/640/480",
+    "room": "Double Bed",
+    "bed": "K-28",
+    "facilities": [
+      "Smart Security",
+      "Expert Team",
+      "Cleaning",
+      "Shop near",
+      "Shower"
+    ],
+    "description": "Crepusculum carcer urbs condico optio. Civitas bardus volubilis in culpa ascit aro attollo decor tondeo. Cibus pauci ascit comparo vesper deludo nulla depono perspiciatis.",
+    "price": 187,
+    "discount": 20,
+    "cancel": "Pecco cresco libero suppono color desino vicinus altus quas cernuus.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683555ead67f83933371",
+    "photo": "https://picsum.photos/seed/QRxkTO/640/480",
+    "room": "Single Bed",
+    "bed": "G-4",
+    "facilities": [
+      "Single bed",
+      "24/7 Online Support",
+      "Shop near",
+      "Towels",
+      "Grocery",
+      "Kitchen"
+    ],
+    "description": "Placeat utrum super accusantium solio pecco ad delectatio acer cerno. Turbo corrupti coniuratio. Adimpleo cetera tot utrimque cicuta alias temptatio copia pauper celebrer.",
+    "price": 225,
+    "discount": 15,
+    "cancel": "Conitor cresco depereo audentia dolorem sufficio ulciscor tenetur.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683655ead67f83933373",
+    "photo": "https://picsum.photos/seed/ToQlmrN8z/640/480",
+    "room": "Double Bed",
+    "bed": "E-0",
+    "facilities": [
+      "Towels",
+      "Expert Team",
+      "High speed WiFi",
+      "Smart Security",
+      "Strong Locker",
+      "Cleaning"
+    ],
+    "description": "Vicinus territo sustineo thorax utroque aequitas brevis. Tergo amaritudo curo terebro copia aptus cariosus. Tremo sollers sursum veniam.",
+    "price": 164,
+    "discount": 30,
+    "cancel": "Soleo careo basium curriculum ara arcesso demulceo pectus.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683755ead67f83933375",
+    "photo": "https://picsum.photos/seed/CSoN0wzP/640/480",
+    "room": "Double Superior",
+    "bed": "L-38",
+    "facilities": [
+      "Shower",
+      "Grocery",
+      "Towels",
+      "Air conditioner"
+    ],
+    "description": "Defaeco canonicus pariatur. Tardus abbas statim supplanto averto perspiciatis desipio decimus arbitro acceptus. Aut utroque despecto sapiente vinitor nihil attonbitus incidunt damnatio.",
+    "price": 300,
+    "discount": 20,
+    "cancel": "Cerno approbo adopto.",
+    "status": "booked"
+  },
+  {
+    "_id": "65a2683755ead67f83933377",
+    "photo": "https://picsum.photos/seed/tlC5O9/640/480",
+    "room": "Double Bed",
+    "bed": "P-5",
+    "facilities": [
+      "Shower",
+      "24/7 Online Support",
+      "Smart Security",
+      "Expert Team"
+    ],
+    "description": "Solum demergo crapula. Apud tactus benigne capitulus absorbeo theologus atrocitas vapulus. Laboriosam tandem comburo baiulus tres congregatio usitas aestivus.",
+    "price": 154,
+    "discount": 20,
+    "cancel": "Supplanto comminor tremo statim deinde maxime tabula tener.",
+    "status": "booked"
+  },
+  {
+    "_id": "65a2683855ead67f83933379",
+    "photo": "https://picsum.photos/seed/VUK5CD/640/480",
+    "room": "Double Bed",
+    "bed": "P-3",
+    "facilities": [
+      "Air conditioner",
+      "Shop near",
+      "Strong Locker",
+      "High speed WiFi",
+      "Shower",
+      "Expert Team"
+    ],
+    "description": "Tribuo causa volva corona. Canto magni uter delego cometes caste terreo ex. Cado uxor atrocitas sonitus undique solium decor antepono amicitia denique.",
+    "price": 205,
+    "discount": 20,
+    "cancel": "Dolor adstringo ratione verbum iste valeo.",
+    "status": "available"
+  },
+  {
+    "_id": "65a2683955ead67f8393337b",
+    "photo": "https://picsum.photos/seed/cLzIZEX/640/480",
+    "room": "Double Bed",
+    "bed": "K-30",
+    "facilities": [
+      "24/7 Online Support",
+      "Towels",
+      "Grocery",
+      "High speed WiFi",
+      "Kitchen",
+      "Breakfast"
+    ],
+    "description": "Optio aequitas amiculum strues sui synagoga damnatio arma. Temporibus ex speculum repudiandae acerbitas sapiente. Textus conturbo eum.",
+    "price": 284,
+    "discount": 30,
+    "cancel": "Suppellex cattus astrum.",
+    "status": "available"
+  }
+]
