@@ -13,16 +13,15 @@ class Model(ABC):
             print(read_json)
 
     @classmethod
-    @classmethod
     def view(cls):
         with open(cls.path) as open_json:
          data = json.load(open_json)
          print("Enter id of element")
-         find_id = input()
+         id = input()
          
-        for i in data:
-            if i["id"] == int(find_id):
-                print(i)
+        for element in data:
+            if element["id"] == int(id):
+                print(element)
 
     # @abstractmethod
     # def create(cls):

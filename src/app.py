@@ -6,7 +6,18 @@ def actions():
     parser = argparse.ArgumentParser(description="Llamar a las acciones.")
     parser.add_argument(
         "action",
-        choices=["read-bookings", "read-rooms", "read-contacts", "read-users", "view-booking"],
+        choices=["read-bookings", 
+                 "view-booking",
+
+                 "read-rooms",
+                 "view-room",
+
+                 "read-contacts",
+                 "view-contact",
+
+                 "read-users",
+                 "view-user", 
+                 ],
         help="La operación que se desea realizar.",
     )
 
@@ -20,10 +31,18 @@ def actions():
         
     elif args.action == "read-rooms":
         Rooms.list()
+    elif args.action == "view-room":
+        Rooms.view()
+
     elif args.action == "read-contacts":
         Contacts.list()
+    elif args.action == "view-contact":
+        Contacts.view()
+
     elif args.action == "read-users":
         Users.list()
+    elif args.action == "view-user":
+        Users.view()
     else:
         print("Acción no reconocida.")
 
