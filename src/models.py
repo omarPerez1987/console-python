@@ -15,13 +15,13 @@ class Model(ABC):
     def view(cls):
         pass
 
-    @abstractmethod
-    def create(cls):
-        pass
+    # @abstractmethod
+    # def create(cls):
+    #     pass
 
-    @abstractmethod
-    def update(cls):
-        pass
+    # @abstractmethod
+    # def update(cls):
+    #     pass
     
     @classmethod
     def delete(cls):

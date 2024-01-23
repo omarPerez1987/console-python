@@ -1,12 +1,15 @@
 import argparse
-from models import Model, Bookings, Contacts, Rooms, Users
+from models import Bookings, Contacts, Rooms, Users
 
 
-def actions():
+input_action = input('Que quieres listar? read-bookings, read-rooms, read-contacts o read-users')
+
+def actions(action):
     parser = argparse.ArgumentParser(description="Llamar a las acciones.")
     parser.add_argument(
         "action",
-        choices=["read-bookings", "read-rooms", "read-contacts", "read-users"],
+        # choices=["read-bookings", "read-rooms", "read-contacts", "read-users"],
+        choices=[action],
         help="La operación que se desea realizar.",
     )
 
@@ -23,4 +26,4 @@ def actions():
     else:
         print("Acción no reconocida.")
 
-actions()
+actions(input_action)
