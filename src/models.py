@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import json
 
 
 class Model(ABC):
@@ -10,10 +11,18 @@ class Model(ABC):
         with open(cls.path) as open_json:
             read_json = open_json.read()
             print(read_json)
-    
+
+    @classmethod
     @classmethod
     def view(cls):
-        pass
+        with open(cls.path) as open_json:
+         data = json.load(open_json)
+         print("Enter id of element")
+         find_id = input()
+         
+        for i in data:
+            if i["id"] == int(find_id):
+                print(i)
 
     # @abstractmethod
     # def create(cls):
@@ -22,7 +31,7 @@ class Model(ABC):
     # @abstractmethod
     # def update(cls):
     #     pass
-    
+
     @classmethod
     def delete(cls):
         pass

@@ -1,6 +1,6 @@
 [
   {
-    "_id": "65a2682b55ead67f8393335f",
+    "id": 1,
     "photo": "https://picsum.photos/seed/yqbNzqH32/640/480",
     "room": "Double Superior ",
     "bed": "C-2",
@@ -20,7 +20,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2682f55ead67f83933361",
+    "id": 2,
     "photo": "https://picsum.photos/seed/wOjS7p/640/480",
     "room": "Single Bed",
     "bed": "R-33",
@@ -37,7 +37,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683055ead67f83933363",
+    "id": 3,
     "photo": "https://picsum.photos/seed/97O949W4/640/480",
     "room": "Suite",
     "bed": "I-27",
@@ -55,7 +55,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683155ead67f83933365",
+    "id": 4,
     "photo": "https://picsum.photos/seed/HbtELr3d/640/480",
     "room": "Double Superior",
     "bed": "T-41",
@@ -71,7 +71,7 @@
     "status": "booked"
   },
   {
-    "_id": "65a2683255ead67f83933367",
+    "id": 5,
     "photo": "https://picsum.photos/seed/9KEmSo31VM/640/480",
     "room": "Single Bed",
     "bed": "G-28",
@@ -90,7 +90,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683355ead67f83933369",
+    "id": 6,
     "photo": "https://picsum.photos/seed/heiUWD/640/480",
     "room": "Suite",
     "bed": "V-50",
@@ -109,7 +109,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683355ead67f8393336b",
+    "id": 7,
     "photo": "https://picsum.photos/seed/l2Z5Bx9tzm/640/480",
     "room": "Suite",
     "bed": "O-15",
@@ -128,7 +128,7 @@
     "status": "booked"
   },
   {
-    "_id": "65a2683455ead67f8393336d",
+    "id": 8,
     "photo": "https://picsum.photos/seed/zz1upgb/640/480",
     "room": "Double Bed",
     "bed": "S-27",
@@ -145,7 +145,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683555ead67f8393336f",
+    "id": 9,
     "photo": "https://picsum.photos/seed/dq3H25/640/480",
     "room": "Double Bed",
     "bed": "K-28",
@@ -163,7 +163,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683555ead67f83933371",
+    "id": 10,
     "photo": "https://picsum.photos/seed/QRxkTO/640/480",
     "room": "Single Bed",
     "bed": "G-4",
@@ -182,7 +182,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683655ead67f83933373",
+    "id": 11,
     "photo": "https://picsum.photos/seed/ToQlmrN8z/640/480",
     "room": "Double Bed",
     "bed": "E-0",
@@ -201,7 +201,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683755ead67f83933375",
+    "id": 12,
     "photo": "https://picsum.photos/seed/CSoN0wzP/640/480",
     "room": "Double Superior",
     "bed": "L-38",
@@ -218,7 +218,7 @@
     "status": "booked"
   },
   {
-    "_id": "65a2683755ead67f83933377",
+    "id": 13,
     "photo": "https://picsum.photos/seed/tlC5O9/640/480",
     "room": "Double Bed",
     "bed": "P-5",
@@ -235,7 +235,7 @@
     "status": "booked"
   },
   {
-    "_id": "65a2683855ead67f83933379",
+    "id": 14,
     "photo": "https://picsum.photos/seed/VUK5CD/640/480",
     "room": "Double Bed",
     "bed": "P-3",
@@ -254,7 +254,7 @@
     "status": "available"
   },
   {
-    "_id": "65a2683955ead67f8393337b",
+    "id": 15,
     "photo": "https://picsum.photos/seed/cLzIZEX/640/480",
     "room": "Double Bed",
     "bed": "K-30",
