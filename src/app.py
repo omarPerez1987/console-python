@@ -10,26 +10,27 @@ def actions():
     parser = argparse.ArgumentParser(description="Llamar a las acciones.")
     parser.add_argument(
         "action",
-        choices=["read-bookings", 
-                 "view-booking",
-                 "create-booking",
-                 "update-booking",
+        choices=[
+            "read-bookings", 
+            "view-booking",
+            "create-booking",
+            "update-booking",
 
-                 "read-rooms",
-                 "view-room",
-                 "create-room",
-                 "update-room",
+            "read-rooms",
+            "view-room",
+            "create-room",
+            "update-room",
 
-                 "read-contacts",
-                 "view-contact",
-                 "create-contact",
-                 "update-contact",
+            "read-contacts",
+            "view-contact",
+            "create-contact",
+            "update-contact",
 
-                 "read-users",
-                 "view-user", 
-                 "create-user",
-                 "update-user",
-                 ],
+            "read-users",
+            "view-user", 
+            "create-user",
+            "update-user",
+            ],
         help="La operación que se desea realizar.",
     )
 

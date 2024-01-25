@@ -30,13 +30,13 @@ class Contacts(Model):
         contact = {
             'id': data_contact["id"],
             'photo': data_contact["photo"],
-            "date": input(f'Modifique la fecha YYYY-MM-DD: {data_contact["date"]}\n') or {data_contact["date"]},
-            "hour": input(f'Modifique la hora HH-MM-SS: {data_contact["hour"]}\n') or {data_contact["hour"]},
-            "name": input(f'Modifique el nombre: {data_contact["name"]}\n') or {data_contact["name"]},
-            "last_name": input(f'Modifique el apellido: {data_contact["last_name"]}\n') or {data_contact["last_name"]},
-            "email": input(f'Modifique el email: {data_contact["email"]}\n') or {data_contact["email"]},
-            "telephone": input(f'Modifique el telefono: {data_contact["telephone"]}\n') or {data_contact["telephone"]},
-            "archived": bool (input(f'Modifique entre true o false): {data_contact["archived"]}\n')) or {data_contact["archived"]},
-            "review": input(f'Modifique la review: {data_contact["review"]}\n') or {data_contact["review"]}
+            "date": input(f'Modifique la fecha YYYY-MM-DD: {data_contact["date"]}\n') or data_contact["date"],
+            "hour": input(f'Modifique la hora HH-MM-SS: {data_contact["hour"]}\n') or data_contact["hour"],
+            "name": input(f'Modifique el nombre: {data_contact["name"]}\n') or data_contact["name"],
+            "last_name": input(f'Modifique el apellido: {data_contact["last_name"]}\n') or data_contact["last_name"],
+            "email": input(f'Modifique el email: {data_contact["email"]}\n') or data_contact["email"],
+            "telephone": input(f'Modifique el telefono: {data_contact["telephone"]}\n') or data_contact["telephone"],
+            "archived": bool (input(f'Modifique entre true o false): {data_contact["archived"]}\n')) or data_contact["archived"],
+            "review": input(f'Modifique la review: {data_contact["review"]}\n') or data_contact["review"]
             }
         print(contact)

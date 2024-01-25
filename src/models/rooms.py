@@ -31,12 +31,12 @@ class Rooms(Model):
             'id': data_room["id"],
             'photo': data_room["photo"],
             "room": input(f'Modifique entre Simple Bed, Double Bed o Suite: {data_room["room"]} \n') or data_room["room"],
-            "bed": input(f'Modifique el numero de Habitación ejemplo P-3: {data_room["bed"]}\n') or {data_room["bed"]},
+            "bed": input(f'Modifique el numero de Habitación ejemplo P-3: {data_room["bed"]}\n') or data_room["bed"],
             "facilities": input(f"Modifique entre Air conditioner, Shop near, Strong Locker, High speed WiFi, Shower, Expert Team: {data_room["facilities"]}\n" or {data_room["facilities"]}),
             "description": input(f'Modifique la descripción\n'),
-            "price": int(input(f'Modifique el precio: {data_room["price"]}\n')) or {data_room["price"]},
-            "discount": int(input(f'Modifique el descuento: {data_room["discount"]}\n')) or {data_room["discount"]},
-            "cancel": input(f'Modifique la politica de cancelación: {data_room["cancel"]}\n') or {data_room["cancel"]},
-            "status": input(f'Modifique entre available o booked: {data_room["status"]}\n') or {data_room["status"]}
+            "price": input(f'Modifique el precio: {data_room["price"]}\n') or data_room["price"],
+            "discount": input(f'Modifique el descuento: {data_room["discount"]}\n') or data_room["discount"],
+            "cancel": input(f'Modifique la politica de cancelación: {data_room["cancel"]}\n') or data_room["cancel"],
+            "status": input(f'Modifique entre available o booked: {data_room["status"]}\n') or data_room["status"]
             }
         print(room)

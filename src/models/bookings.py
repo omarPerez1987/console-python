@@ -37,12 +37,12 @@ class Bookings(Model):
             "name": input(f'Modifique el nombre del cliente: {data_booking["name"]}\n') or {data_booking["name"]},
             "orderDate": datetime.now().strftime("%Y-%m-%d"),
             "orderTime": datetime.now().strftime("%H:%M:%S"),
-            "checkin": input(f'Modifique la fecha de entrada YYYY-MM-DD: {data_booking["checkin"]}\n') or {data_booking["checkin"]},
-            "checkinTime": input(f'Modifique la hora de entrada HH:MM:SS: {data_booking["checkinTime"]}\n') or {data_booking["checkinTime"]},
-            "checkout": input(f'Modifique la fecha de salida YYYY-MM-DD: {data_booking["checkout"]}\n') or {data_booking["checkout"]},
-            "checkoutTime": input(f'Modifique la hora de salida HH:MM:SS: {data_booking["checkoutTime"]}\n') or {data_booking["checkoutTime"]},
+            "checkin": input(f'Modifique la fecha de entrada YYYY-MM-DD: {data_booking["checkin"]}\n') or data_booking["checkin"],
+            "checkinTime": input(f'Modifique la hora de entrada HH:MM:SS: {data_booking["checkinTime"]}\n') or data_booking["checkinTime"],
+            "checkout": input(f'Modifique la fecha de salida YYYY-MM-DD: {data_booking["checkout"]}\n') or data_booking["checkout"],
+            "checkoutTime": input(f'Modifique la hora de salida HH:MM:SS: {data_booking["checkoutTime"]}\n') or data_booking["checkoutTime"],
             "notes": input(f'Modifique la nota: {data_booking["notes"]}\n') or {data_booking["notes"]},
-            "idRoom": int (input(f'Modifique la habitación asignada entre 1 y {len(data)}: {data_booking["idRoom"]}\n') or {data_booking["idRoom"]}),
-            "check": input(f'Modifique la situación del check (checked-in, checked-out o pending): {data_booking["check"]}\n') or {data_booking["check"]}
+            "idRoom": input(f'Modifique la habitación asignada entre 1 y {len(data)}: {data_booking["idRoom"]}\n') or data_booking["idRoom"],
+            "check": input(f'Modifique la situación del check (checked-in, checked-out o pending): {data_booking["check"]}\n') or data_booking["check"]
             }
         print(booking)
