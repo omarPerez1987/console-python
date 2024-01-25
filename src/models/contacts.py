@@ -26,7 +26,7 @@ class Contacts(Model):
 
     @classmethod
     def update(cls):
-        data_contact = Contacts.view(id)
+        data_contact = Contacts.view()
         contact = {
             'id': data_contact["id"],
             'photo': data_contact["photo"],

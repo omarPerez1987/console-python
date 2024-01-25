@@ -26,7 +26,7 @@ class Rooms(Model):
 
     @classmethod
     def update(cls):
-        data_room = Rooms.view(id)
+        data_room = Rooms.view()
         room = {
             'id': data_room["id"],
             'photo': data_room["photo"],

@@ -3,6 +3,7 @@ import json
 
 
 class Model(ABC):
+    @abstractmethod
     def __init__(self, path):
         self.path = path
 
@@ -13,7 +14,7 @@ class Model(ABC):
             print(read_json)
 
     @classmethod
-    def view(cls, id):
+    def view(cls):
         with open(cls.path) as open_json:
             data = json.load(open_json)
             print(f"Introduzca el id del elemento del 1 al {len(data)}")

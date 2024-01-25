@@ -26,7 +26,7 @@ class Users(Model):
 
     @classmethod
     def update(cls):
-        data_user = Users.view(id)
+        data_user = Users.view()
         user = {
             'id': data_user["id"],
             'photo': data_user["photo"],

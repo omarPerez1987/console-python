@@ -29,7 +29,7 @@ class Bookings(Model):
 
     @classmethod
     def update(cls):
-        data_booking = Bookings.view(id)
+        data_booking = Bookings.view()
         with open(cls.path) as open_json:
             data = json.load(open_json)
         booking = {
