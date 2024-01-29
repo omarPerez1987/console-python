@@ -7,10 +7,7 @@ class Users(Model):
 
     @classmethod
     def create(cls):
-        with open(cls.path) as open_json:
-            data = json.load(open_json)
         data_users = {
-            'id': f'{len(data) + 1}',
             'photo': 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/610.jpg',
             'name': input('Introduzca el nombre\n'),
             'email': input('Introduzca el email\n'),
@@ -22,13 +19,12 @@ class Users(Model):
             'password': input('Introduzca el password \n')
 
         }
-        print(f'{data_users}')
+        return Model.create(data_users)
 
     @classmethod
     def update(cls):
         data_user = Users.view()
         user = {
-            'id': data_user["id"],
             'photo': data_user["photo"],
             'name': input(f'Modifique el nombre: {data_user["name"]}\n') or data_user["name"],
             'email': input(f'Modifique el email: {data_user["email"]}\n') or data_user["email"],
@@ -39,4 +35,4 @@ class Users(Model):
             'position': input(f'Modifique entre Reception, Manager o Service: {data_user["position"]}\n') or data_user["position"],
             'password': input(f'Modifique el password: {data_user["password"]} \n') or data_user["password"]
             }
-        print(user)
+        return Model.update(user)

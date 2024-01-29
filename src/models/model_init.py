@@ -20,21 +20,21 @@ class Model(ABC):
             print(f"Introduzca el id del elemento del 1 al {len(data)}")
             id = input()
 
-            if int(id) > int(len(data)) or int(id) < 1:
-                print(f"El id introducido ({id}) no está entre 1 y {len(data)}")
-            else:
-                for element in data:
-                    if element["id"] == int(id):
-                        print(element)
-                        return element
+        if int(id) > int(len(data)) or int(id) < 1:
+            print(f"El id introducido ({id}) no está entre 1 y {len(data)}")
+        else:
+            for element in data:
+                if element["id"] == int(id):
+                    print(element)
+                    return element
 
-    @abstractmethod
-    def create(self):
-        pass
+    @classmethod
+    def create(cls, data):
+        print(data)
     
-    @abstractmethod
-    def update(self):
-        pass
+    @classmethod
+    def update(cls, data):
+        print(data)
     
     @classmethod
     def delete(cls):

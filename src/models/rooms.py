@@ -7,10 +7,7 @@ class Rooms(Model):
 
     @classmethod
     def create(cls):
-        with open(cls.path) as open_json:
-            data = json.load(open_json)
         data_room = {
-            'id': f'{len(data) + 1}',
             "photo": "https://picsum.photos/seed/VUK5CD/640/480",
             "room": input('Eliga entre Simple Bed, Double Bed o Suite\n'),
             "bed": input('Escriba el numero de Habitación ejemplo P-3\n'),
@@ -22,13 +19,12 @@ class Rooms(Model):
             "status": input('Eliga entre available o booked \n')
 
         }
-        print(f'{data_room}')
+        return Model.create(data_room)
 
     @classmethod
     def update(cls):
         data_room = Rooms.view()
         room = {
-            'id': data_room["id"],
             'photo': data_room["photo"],
             "room": input(f'Modifique entre Simple Bed, Double Bed o Suite: {data_room["room"]} \n') or data_room["room"],
             "bed": input(f'Modifique el numero de Habitación ejemplo P-3: {data_room["bed"]}\n') or data_room["bed"],
@@ -39,4 +35,4 @@ class Rooms(Model):
             "cancel": input(f'Modifique la politica de cancelación: {data_room["cancel"]}\n') or data_room["cancel"],
             "status": input(f'Modifique entre available o booked: {data_room["status"]}\n') or data_room["status"]
             }
-        print(room)
+        return Model.update(room)

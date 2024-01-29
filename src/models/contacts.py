@@ -7,10 +7,8 @@ class Contacts(Model):
 
     @classmethod
     def create(cls):
-        with open(cls.path) as open_json:
-            data = json.load(open_json)
+
         data_contact = {
-            'id': f'{len(data) + 1}',
             "photo": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/920.jpg",
             "date": input('Introduzca la fecha YYYY-MM-DD\n'),
             "hour": input('Introduzca la hora HH-MM-SS\n'),
@@ -22,13 +20,12 @@ class Contacts(Model):
             "review": input('Introduzca la review\n')
 
         }
-        print(f'{data_contact}')
+        return Model.create(data_contact)
 
     @classmethod
     def update(cls):
         data_contact = Contacts.view()
         contact = {
-            'id': data_contact["id"],
             'photo': data_contact["photo"],
             "date": input(f'Modifique la fecha YYYY-MM-DD: {data_contact["date"]}\n') or data_contact["date"],
             "hour": input(f'Modifique la hora HH-MM-SS: {data_contact["hour"]}\n') or data_contact["hour"],
@@ -39,4 +36,4 @@ class Contacts(Model):
             "archived": bool (input(f'Modifique entre true o false): {data_contact["archived"]}\n')) or data_contact["archived"],
             "review": input(f'Modifique la review: {data_contact["review"]}\n') or data_contact["review"]
             }
-        print(contact)
+        return Model.update(contact)
