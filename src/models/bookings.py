@@ -24,8 +24,7 @@ class Bookings(Model):
             "notes": input('Introduzca la nota\n'),
             "idRoom": int(input(f'Introduzca la habitación asignada entre 1 y {len(data)}\n')),
             "check": input('Eliga la situación del check (checked-in, checked-out o pending)\n')
-
-        }
+            }
         return Model.create(data_booking)
 
     @classmethod

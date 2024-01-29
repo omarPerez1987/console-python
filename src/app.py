@@ -20,7 +20,6 @@ def validate(options):
         print("Opción no reconocida.\n")
         actions()
 
-
 def actions():
     action_number = input(f"Elige una opción:\n{''.join(f'{key}: {value}   ' for key, value in options_action.items())}\n")
     action_number = int(action_number)
