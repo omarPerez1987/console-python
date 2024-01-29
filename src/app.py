@@ -1,78 +1,30 @@
 import argparse
-# from models.model_init import Model
 from models.bookings import Bookings
 from models.rooms import Rooms
 from models.contacts import Contacts
 from models.users import Users
 
+options_action = {"1": "list", "2": "view", "3": "create", "4": "update"}
+options_type = {"1": "booking", "2": "room", "3": "contact", "4": "user"}
+
+action_mapping = {
+    "list": {"booking": Bookings.list, "room": Rooms.list, "contact": Contacts.list, "user": Users.list},
+    "view": {"booking": Bookings.view, "room": Rooms.view, "contact": Contacts.view, "user": Users.view},
+    "create": {"booking": Bookings.create, "room": Rooms.create, "contact": Contacts.create, "user": Users.create},
+    "update": {"booking": Bookings.update, "room": Rooms.update, "contact": Contacts.update, "user": Users.update},
+}
+
+action_number = input(f"Que quieres hacer? {', '.join(f'{key}:{value}' for key, value in options_action.items())}: ")
+action = options_action.get(action_number)
+
+
+type_number = input(f"Donde quieres {action}: {', '.join(f'{key}:{value}' for key, value in options_type.items())}: ")
+type = options_type.get(type_number)
 
 def actions():
-    parser = argparse.ArgumentParser(description="Llamar a las acciones.")
-    parser.add_argument(
-        "action",
-        choices=[
-            "read-bookings", 
-            "view-booking",
-            "create-booking",
-            "update-booking",
-
-            "read-rooms",
-            "view-room",
-            "create-room",
-            "update-room",
-
-            "read-contacts",
-            "view-contact",
-            "create-contact",
-            "update-contact",
-
-            "read-users",
-            "view-user", 
-            "create-user",
-            "update-user",
-            ],
-        help="La operación que se desea realizar.",
-    )
-
-    args = parser.parse_args()
-
-    if args.action == "read-bookings":
-        Bookings.list()
-    elif args.action == "view-booking":
-        Bookings.view()
-    elif args.action == "create-booking":
-        Bookings.create()
-    elif args.action == "update-booking":
-        Bookings.update()
-
-    elif args.action == "read-rooms":
-        Rooms.list()
-    elif args.action == "view-room":
-        Rooms.view()
-    elif args.action == "create-room":
-        Rooms.create()
-    elif args.action == "update-room":
-        Rooms.update()
-
-    elif args.action == "read-contacts":
-        Contacts.list()
-    elif args.action == "view-contact":
-        Contacts.view()
-    elif args.action == "create-contact":
-        Contacts.create()
-    elif args.action == "update-contact":
-        Contacts.update()
-
-    elif args.action == "read-users":
-        Users.list()
-    elif args.action == "view-user":
-        Users.view()
-    elif args.action == "create-user":
-        Users.create()
-    elif args.action == "update-user":
-        Users.update()
+    if action and type in action_mapping[action]:
+        action_mapping[action][type]()
     else:
         print("Acción no reconocida.")
-
 
 actions()

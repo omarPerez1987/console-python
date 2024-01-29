@@ -28,8 +28,14 @@ class Model(ABC):
                         print(element)
                         return element
 
+    @abstractmethod
+    def create(self):
+        pass
     
-
+    @abstractmethod
+    def update(self):
+        pass
+    
     @classmethod
     def delete(cls):
         pass
