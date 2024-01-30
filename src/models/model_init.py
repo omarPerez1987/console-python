@@ -18,6 +18,7 @@ class Model(ABC):
                 cursor.execute(f'SELECT * FROM {type}s')
                 rows = cursor.fetchall()
 
+
                 print('Datos de la tabla:')
                 for row in rows:
                     print(row)
@@ -39,6 +40,7 @@ class Model(ABC):
                 print('Datos de la tabla:')
                 for row in rows:
                     print(row)
+                    return row
             finally:
                 if connection.is_connected():
                     connection.close()
@@ -46,12 +48,53 @@ class Model(ABC):
 
 
     @classmethod
-    def create(cls, data):
-        print(data)
+    def create(cls, data, type):
+        connection = connect()
+        if connection:
+            try:
+                cursor = connection.cursor()
+
+                placeholders = ', '.join(['%s'] * len(data))
+                columns = ', '.join(data.keys())
+                sql = f'INSERT INTO {type}s ({columns}) VALUES ({placeholders})'
+
+                cursor.execute(sql, data)
+                connection.commit()
+
+                print('Datos insertados correctamente.')
+
+            except Exception as e:
+                print(f'Error al insertar datos: {e}')
+            finally:
+                if connection.is_connected():
+                    connection.close()
+                    print('Conexión cerrada')
     
     @classmethod
-    def update(cls, data):
-        print(data)
+    def update(cls, data, type, id):
+
+        connection = connect()
+        if connection:
+            try:
+                cursor = connection.cursor()
+
+                placeholders = ', '.join([f'{key}=%s' for key in data.keys()])
+                sql = f'UPDATE {type}s SET {placeholders} WHERE id = %s'
+                values = list(data.values()) + [id]
+
+                cursor.execute(sql, values)
+                connection.commit()
+
+                print('Datos actualizados correctamente.')
+
+            except Exception as e:
+                print(f'Error al actualizar datos: {e}')
+            finally:
+                if connection.is_connected():
+                    connection.close()
+                    print('Conexión cerrada')
+
+
     
     @classmethod
     def delete(cls):
