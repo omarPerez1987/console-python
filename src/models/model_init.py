@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from config.mysql import connect
 import json
 
 
@@ -8,25 +9,41 @@ class Model(ABC):
         self.path = path
 
     @classmethod
-    def list(cls):
-        with open(cls.path) as open_json:
-            read_json = open_json.read()
-            print(read_json)
+    def list(cls, type):
+        print(type)
+        connection = connect()
+        if connection:
+            try:
+                cursor = connection.cursor()
+                cursor.execute(f'SELECT * FROM {type}s')
+                rows = cursor.fetchall()
+
+                print('Datos de la tabla:')
+                for row in rows:
+                    print(row)
+            finally:
+                if connection.is_connected():
+                    connection.close()
+                    print('Conexión cerrada')
 
     @classmethod
-    def view(cls):
-        with open(cls.path) as open_json:
-            data = json.load(open_json)
-            print(f"Introduzca el id del elemento del 1 al {len(data)}")
-            id = input()
+    def view(cls, type):
+        id = input(f"Introduzca el id del elemento a buscar...\n")
+        connection = connect()
+        if connection:
+            try:
+                cursor = connection.cursor()
+                cursor.execute(f'SELECT * FROM {type}s WHERE id={id}')
+                rows = cursor.fetchall()
 
-        if int(id) > int(len(data)) or int(id) < 1:
-            print(f"El id introducido ({id}) no está entre 1 y {len(data)}")
-        else:
-            for element in data:
-                if element["id"] == int(id):
-                    print(element)
-                    return element
+                print('Datos de la tabla:')
+                for row in rows:
+                    print(row)
+            finally:
+                if connection.is_connected():
+                    connection.close()
+                    print('Conexión cerrada')
+
 
     @classmethod
     def create(cls, data):

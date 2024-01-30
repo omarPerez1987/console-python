@@ -36,7 +36,7 @@ def actions():
         type = options_type.get(str(type_number))  
 
     if action and type in action_mapping[action]:
-        action_mapping[action][type]()
+        action_mapping[action][type](type)
     else:
         print("Acción no reconocida.")
 
