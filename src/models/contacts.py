@@ -1,6 +1,7 @@
 from models.model_init import Model
-import json
-
+from datetime import datetime
+from faker import Faker
+fake = Faker()
 
 class Contacts(Model):
     path = "../data/contacts.json"
@@ -9,16 +10,15 @@ class Contacts(Model):
     def create(cls):
 
         data_contact = {
-            "photo": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/920.jpg",
-            "date": input('Introduzca la fecha YYYY-MM-DD\n'),
-            "hour": input('Introduzca la hora HH-MM-SS\n'),
-            "name": input('Introduzca el nombre\n'),
-            "last_name": input('Introduzca el apellido\n'),
-            "email": input('Introduzca el email\n'),
-            "telephone": input('Introduzca telefono\n'),
-            "archived": bool (input('Esta archivado? true o false)\n')),
-            "review": input('Introduzca la review\n')
-
+            "photo": 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/170.jpg',
+            "date": input('Introduzca la fecha YYYY-MM-DD\n') or fake.date_between(start_date='-1y', end_date='today').strftime("%Y-%m-%d"),
+            "hour": input('Introduzca la hora HH-MM-SS\n') or fake.time(),
+            "name": input('Introduzca el nombre\n') or fake.first_name(),
+            "last_name": input('Introduzca el apellido\n') or fake.last_name(),
+            "email": input('Introduzca el email\n') or fake.email(),
+            "telephone": input('Introduzca telefono\n') or fake.phone_number(),
+            "archived": bool (input('Esta archivado? true o false\n')) or fake.boolean(),
+            "review": input('Introduzca la review\n') or fake.text()
         }
         return Model.create(data_contact)
 

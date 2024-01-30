@@ -1,5 +1,7 @@
 from models.model_init import Model
 import json
+from faker import Faker
+fake = Faker()
 
 
 class Users(Model):
@@ -9,15 +11,14 @@ class Users(Model):
     def create(cls):
         data_users = {
             'photo': 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/610.jpg',
-            'name': input('Introduzca el nombre\n'),
-            'email': input('Introduzca el email\n'),
-            'phone': input ('Introduzca el telefono\n'),
-            'description': input('Introduzca una descripción\n'),
-            'status': input('Eliga inactive o active\n'),
-            'startDate': input('Introduzca fecha de alta YYYY/MM/DD\n'),
-            'position': input('Eliga Reception, Manager o Service\n'),
-            'password': input('Introduzca el password \n')
-
+            'name': input('Introduzca el nombre\n') or fake.name(),
+            'email': input('Introduzca el email\n') or fake.email(),
+            'phone': input('Introduzca el telefono\n') or fake.phone_number(),
+            'description': input('Introduzca una descripción\n') or fake.text(),
+            'status': input('Eliga inactive o active\n') or fake.random_element(elements=('inactive', 'active')),
+            'startDate': input('Introduzca fecha de alta YYYY/MM/DD\n') or fake.date_between(start_date='-1y', end_date='today').strftime("%Y-%m-%d"),
+            'position': input('Eliga Reception, Manager o Service\n') or fake.random_element(elements=('Reception', 'Manager', 'Service')),
+            'password': input('Introduzca el password\n') or fake.password()
         }
         return Model.create(data_users)
 
