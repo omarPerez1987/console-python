@@ -39,11 +39,14 @@ class Model(ABC):
                 cursor.execute(f'SELECT * FROM {type}s WHERE id={id}')
                 rows = cursor.fetchall()
 
-                print('Datos de la tabla:')
+                if rows:
+                    print('Datos de la tabla:')
                 for row in rows:
                     print(row)
                     return row
-                
+                else:
+                    print('Esos datos ya no existen...')
+
             except Exception as e:
                 print(f'No se pudo mostrar los datos: {e}')
 
