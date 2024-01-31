@@ -10,7 +10,6 @@ class Model(ABC):
 
     @classmethod
     def list(cls, type):
-        print(type)
         connection = connect()
         if connection:
             try:
@@ -18,10 +17,13 @@ class Model(ABC):
                 cursor.execute(f'SELECT * FROM {type}s')
                 rows = cursor.fetchall()
 
-
                 print('Datos de la tabla:')
                 for row in rows:
                     print(row)
+
+            except Exception as e:
+                print(f'No se pudo mostrar los datos: {e}')
+
             finally:
                 if connection.is_connected():
                     connection.close()
@@ -33,7 +35,7 @@ class Model(ABC):
         connection = connect()
         if connection:
             try:
-                cursor = connection.cursor()
+                cursor = connection.cursor(dictionary=True)
                 cursor.execute(f'SELECT * FROM {type}s WHERE id={id}')
                 rows = cursor.fetchall()
 
@@ -41,6 +43,10 @@ class Model(ABC):
                 for row in rows:
                     print(row)
                     return row
+                
+            except Exception as e:
+                print(f'No se pudo mostrar los datos: {e}')
+
             finally:
                 if connection.is_connected():
                     connection.close()
@@ -54,17 +60,23 @@ class Model(ABC):
             try:
                 cursor = connection.cursor()
 
-                placeholders = ', '.join(['%s'] * len(data))
-                columns = ', '.join(data.keys())
+                placeholder_list = ['%s'] * len(data)
+                placeholders = ', '.join(placeholder_list)
+
+                column_list = list(data.keys())
+                columns = ', '.join(column_list)
+
+                values = list(data.values())
                 sql = f'INSERT INTO {type}s ({columns}) VALUES ({placeholders})'
 
-                cursor.execute(sql, data)
+                cursor.execute(sql, values)
                 connection.commit()
 
                 print('Datos insertados correctamente.')
 
             except Exception as e:
                 print(f'Error al insertar datos: {e}')
+
             finally:
                 if connection.is_connected():
                     connection.close()
@@ -78,7 +90,9 @@ class Model(ABC):
             try:
                 cursor = connection.cursor()
 
-                placeholders = ', '.join([f'{key}=%s' for key in data.keys()])
+                placeholder_list = ['%s'] * len(data)
+                placeholders = ', '.join(placeholder_list)
+
                 sql = f'UPDATE {type}s SET {placeholders} WHERE id = %s'
                 values = list(data.values()) + [id]
 
@@ -89,6 +103,7 @@ class Model(ABC):
 
             except Exception as e:
                 print(f'Error al actualizar datos: {e}')
+
             finally:
                 if connection.is_connected():
                     connection.close()
@@ -97,6 +112,22 @@ class Model(ABC):
 
     
     @classmethod
-    def delete(cls):
-        pass
+    def delete(cls, type):
+        id = input(f"Introduzca el id del elemento a eliminar...\n")
+
+        connection = connect()
+        if connection:
+            try:
+                cursor = connection.cursor()
+                cursor.execute(f'DELETE FROM {type}s WHERE id = {id}')
+                connection.commit()              
+                print('Datos de la tabla eliminados')
+
+            except Exception as e:
+                print(f'Hubo un error al eliminar los datos: {e}')
+
+            finally:
+                if connection.is_connected():
+                    connection.close()
+                    print('Conexión cerrada')
 

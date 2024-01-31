@@ -25,16 +25,16 @@ class Rooms(Model):
     @classmethod
     def update(cls, type):
         data_room = Rooms.view(type)
-        id = data_room[0]
+        id = data_room['id']
         room = {
-            'photo': data_room[1],
-            "room": input(f'Modifique entre Simple Bed, Double Bed o Suite: {data_room[2]} \n') or data_room[2],
-            "bed": input(f'Modifique el numero de Habitación ejemplo P-3: {data_room[3]}\n') or data_room[3],
-            "facilities": input(f"Modifique entre Air conditioner, Shop near, Strong Locker, High speed WiFi, Shower, Expert Team: {data_room[4]}\n") or data_room[4],
-            "description": input(f'Modifique la descripción\n') or data_room[5],
-            "price": int (input(f'Modifique el precio: {data_room[6]}\n') or data_room[6]),
-            "discount": int (input(f'Modifique el descuento: {data_room[7]}\n') or data_room[7]),
-            "cancel": input(f'Modifique la politica de cancelación: {data_room[8]}\n') or data_room[8],
-            "status": input(f'Modifique entre available o booked: {data_room[9]}\n') or data_room[9]
+            'photo': data_room['photo'],
+            "room": input(f'Modifique entre Simple Bed, Double Bed o Suite: {data_room['room']} \n') or data_room['room'],
+            "bed": input(f'Modifique el numero de Habitación ejemplo P-3: {data_room['bed']}\n') or data_room['bed'],
+            "facilities": input(f"Modifique entre Air conditioner, Shop near, Strong Locker, High speed WiFi, Shower, Expert Team: {data_room['facilities']}\n") or data_room['facilities'],
+            "description": input(f'Modifique la descripción\n') or data_room['description'],
+            "price": int (input(f'Modifique el precio: {data_room['price']}\n') or data_room['price']),
+            "discount": int (input(f'Modifique el descuento: {data_room['discount']}\n') or data_room['discount']),
+            "cancel": input(f'Modifique la politica de cancelación: {data_room['cancel']}\n') or data_room['cancel'],
+            "status": input(f'Modifique entre available o booked: {data_room['status']}\n') or data_room['status']
             }
         return Model.update(room, type, id)

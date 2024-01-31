@@ -33,17 +33,17 @@ class Bookings(Model):
     def update(cls, type):
 
         data_booking = Bookings.view(type)
-        id = data_booking[0]
+        id = data_booking['id']
         booking = {
-            "name": input(f'\n Modifique el nombre del cliente: {data_booking[1]}\n') or data_booking[1],
+            "name": input(f'\n Modifique el nombre del cliente: {data_booking['name']}\n') or data_booking['name'],
             "orderDate": datetime.now().strftime("%Y-%m-%d"),
             "orderTime": datetime.now().strftime("%H:%M:%S"),
-            "checkin": input(f'Modifique la fecha de entrada YYYY-MM-DD: {data_booking[4]}\n') or data_booking[4],
-            "checkinTime": input(f'Modifique la hora de entrada HH:MM:SS: {data_booking[5]}\n') or data_booking[5],
-            "checkout": input(f'Modifique la fecha de salida YYYY-MM-DD: {data_booking[6]}\n') or data_booking[6],
-            "checkoutTime": input(f'Modifique la hora de salida HH:MM:SS: {data_booking[7]}\n') or data_booking[7],
-            "notes": input(f'Modifique la nota: {data_booking[8]}\n') or data_booking[8],
-            "idRoom": int(input(f'Modifique la habitación asignada: {data_booking[9]}\n') or data_booking[9]),
-            "status": input(f'Modifique la situación del check (checked-in, checked-out o pending): {data_booking[10]}\n') or data_booking[10]
+            "checkin": input(f'Modifique la fecha de entrada YYYY-MM-DD: {data_booking['checkin']}\n') or data_booking['checkin'],
+            "checkinTime": input(f'Modifique la hora de entrada HH:MM:SS: {data_booking['checkinTime']}\n') or data_booking['checkinTime'],
+            "checkout": input(f'Modifique la fecha de salida YYYY-MM-DD: {data_booking['checkout']}\n') or data_booking['checkout'],
+            "checkoutTime": input(f'Modifique la hora de salida HH:MM:SS: {data_booking['checkoutTime']}\n') or data_booking['checkoutTime'],
+            "notes": input(f'Modifique la nota: {data_booking['notes']}\n') or data_booking['notes'],
+            "idRoom": int(input(f'Modifique la habitación asignada: {data_booking['idRoom']}\n') or data_booking['idRoom']),
+            "status": input(f'Modifique la situación del check (checked-in, checked-out o pending): {data_booking['status']}\n') or data_booking['status']
             }
         return Model.update(booking, type, id)
