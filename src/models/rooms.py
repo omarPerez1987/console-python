@@ -20,7 +20,7 @@ class Rooms(Model):
             "cancel": input('Introduce la política de cancelación\n') or fake.sentence(),
             "status": input('Elige entre "available" o "booked"\n') or fake.random_element(elements=('available', 'booked'))
         }
-        return Model.create(data_room)
+        return Model.create(data_room, type)
 
     @classmethod
     def update(cls, type):

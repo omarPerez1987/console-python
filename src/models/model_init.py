@@ -87,6 +87,7 @@ class Model(ABC):
     
     @classmethod
     def update(cls, data, type, id):
+        print(data)
 
         connection = connect()
         if connection:
