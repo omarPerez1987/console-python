@@ -13,13 +13,14 @@ class Model(ABC):
         connection = connect()
         if connection:
             try:
-                cursor = connection.cursor()
+                cursor = connection.cursor(dictionary=True)
                 cursor.execute(f'SELECT * FROM {type}s')
-                rows = cursor.fetchall()
+                res = cursor.fetchall()
 
                 print('Datos de la tabla:')
-                for row in rows:
-                    print(row)
+                for element in res:
+                    print(element)
+                return res
 
             except Exception as e:
                 print(f'No se pudo mostrar los datos: {e}')
@@ -63,6 +64,8 @@ class Model(ABC):
             try:
                 cursor = connection.cursor()
 
+                data['facilities'] = json.dumps(data['facilities'])
+
                 placeholder_list = ['%s'] * len(data)
                 placeholders = ', '.join(placeholder_list)
 
@@ -100,6 +103,7 @@ class Model(ABC):
                 sql = f'UPDATE {type}s SET {placeholders} WHERE id = %s'
                 values = list(data.values()) + [id]
 
+                print(cursor.execute(sql, values))
                 cursor.execute(sql, values)
                 connection.commit()
 
@@ -134,4 +138,5 @@ class Model(ABC):
                 if connection.is_connected():
                     connection.close()
                     print('Conexión cerrada')
+
 

@@ -27,14 +27,14 @@ class Users(Model):
         data_user = Users.view(type)
         id = data_user['id']
         user = {
-            'photo': data_user['photo'],
-            'name': input(f'Modifique el nombre: {data_user['name']}\n') or data_user['name'],
-            'email': input(f'Modifique el email: {data_user['email']}\n') or data_user['email'],
-            'phone': input (f'Modifique el phone: {data_user['phone']}\n') or data_user['phone'],
-            'description': input(f'Modifique la descripción: {data_user['description']}\n') or data_user['description'],
-            'status': input(f'Modifique entre inactive o active: {data_user['status']}\n') or data_user['status'],
-            'startDate': input(f'Modifique la fecha de alta YYYY/MM/DD: {data_user['startDate']}\n') or data_user['startDate'],
-            'position': input(f'Modifique entre Reception, Manager o Service: {data_user['position']}\n') or data_user['position'],
-            'password': input(f'Modifique el password: {data_user['password']} \n') or data_user['password']
+            'photo': data_user["photo"],
+            'name': input(f'Modifique el nombre: {data_user["name"]}\n') or data_user["name"],
+            'email': input(f'Modifique el email: {data_user["email"]}\n') or data_user["email"],
+            'phone': input (f'Modifique el phone: {data_user["phone"]}\n') or data_user["phone"],
+            'description': input(f'Modifique la descripción: {data_user["description"]}\n') or data_user["description"],
+            'status': input(f'Modifique entre inactive o active: {data_user["status"]}\n') or data_user["status"],
+            'startDate': input(f'Modifique la fecha de alta YYYY/MM/DD: {data_user["startDate"]}\n') or data_user["startDate"],
+            'position': input(f'Modifique entre Reception, Manager o Service: {data_user["position"]}\n') or data_user["position"],
+            'password': input(f'Modifique el password: {data_user["password"]} \n') or data_user["password"]
             }
         return Model.update(user, type, id)
