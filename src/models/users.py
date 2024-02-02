@@ -1,4 +1,4 @@
-from models.model_init import Model
+from models.model import Model
 import json
 from faker import Faker
 fake = Faker()

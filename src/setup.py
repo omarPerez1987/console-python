@@ -13,16 +13,11 @@ setup(
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
         install_requires=[
-            'Faker 22.6.0',
-            'mysql-connector-python 8.3.0',
-            'pip 23.3.2',
-            'pytest 7.4.4',
-            'python-dotenv 1.0.1',
-            'setuptools 69.0.3',
+            'Faker',
+            'mysql-connector-python',
+            'pip',
+            'pytest',
+            'python-dotenv',
+            'setuptools',
         ],
-        entry_points={
-        'console_scripts': [
-            'create_db = seeds.create_db',
-        ],
-    },
 )

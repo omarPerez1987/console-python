@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from config.mysql import connect
+from config.connect_db import connect
 import json
 
 

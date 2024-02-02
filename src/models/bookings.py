@@ -1,4 +1,4 @@
-from models.model_init import Model
+from models.model import Model
 from models.rooms import Rooms
 from datetime import datetime
 from faker import Faker
