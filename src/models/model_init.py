@@ -10,6 +10,7 @@ class Model(ABC):
 
     @classmethod
     def list(cls, type):
+        print(type)
         connection = connect()
         if connection:
             try:
@@ -38,13 +39,13 @@ class Model(ABC):
             try:
                 cursor = connection.cursor(dictionary=True)
                 cursor.execute(f'SELECT * FROM {type}s WHERE id={id}')
-                rows = cursor.fetchall()
+                res = cursor.fetchall()
 
-                if rows:
+                if res:
                     print('Datos de la tabla:')
-                for row in rows:
-                    print(row)
-                    return row
+                for element in res:
+                    print(element)
+                    return element
                 else:
                     print('Esos datos ya no existen...')
 
