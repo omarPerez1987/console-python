@@ -20,7 +20,8 @@ class Model(ABC):
 
                 print('Datos de la tabla:')
                 for element in res:
-                    print(element)
+                    for key, value in element.items():
+                        print(f"{key}: {value}")
                 return res
 
             except Exception as e:
@@ -44,7 +45,8 @@ class Model(ABC):
                 if res:
                     print('Datos de la tabla:')
                 for element in res:
-                    print(element)
+                    for key, value in element.items():
+                        print(f"{key}: {value}")
                     return element
                 else:
                     print('Esos datos ya no existen...')
@@ -91,23 +93,22 @@ class Model(ABC):
     
     @classmethod
     def update(cls, data, type, id):
-        print(data)
-
         connection = connect()
         if connection:
             try:
                 cursor = connection.cursor()
 
-                placeholder_list = ['%s'] * len(data)
-                placeholders = ', '.join(placeholder_list)
+                update_values = ', '.join([f"{column} = %s" for column in data.keys()])
 
-                sql = f'UPDATE {type}s SET {placeholders} WHERE id = %s'
+                sql = f'UPDATE {type}s SET {update_values} WHERE id = %s'
+
                 values = list(data.values()) + [id]
 
-                print(cursor.execute(sql, values))
+                
+                print(data)
                 cursor.execute(sql, values)
-                connection.commit()
-
+                # connection.commit()
+                print('***********************************')
                 print('Datos actualizados correctamente.')
 
             except Exception as e:
@@ -129,7 +130,7 @@ class Model(ABC):
             try:
                 cursor = connection.cursor()
                 cursor.execute(f'DELETE FROM {type}s WHERE id = {id}')
-                connection.commit()              
+                # connection.commit()              
                 print('Datos de la tabla eliminados')
 
             except Exception as e:

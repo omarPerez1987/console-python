@@ -39,7 +39,7 @@ class Bookings(Model):
             "checkinTime": input(f'Modifique la hora de entrada HH:MM:SS: {data_booking["checkinTime"]}\n') or data_booking["checkinTime"],
             "checkout": input(f'Modifique la fecha de salida YYYY-MM-DD: {data_booking["checkout"]}\n') or data_booking["checkout"],
             "checkoutTime": input(f'Modifique la hora de salida HH:MM:SS: {data_booking["checkoutTime"]}\n') or data_booking["checkoutTime"],
-            "notes": input(f'Modifique la nota: {data_booking["notes"]}\n') or {data_booking["notes"]},
+            "notes": input(f'Modifique la nota: {data_booking["notes"]}\n') or data_booking["notes"],
             "idRoom": int(input(f'Modifique la habitación asignada: {data_booking["idRoom"]}\n') or data_booking["idRoom"]),
             "status": input(f'Modifique la situación del check (checked-in, checked-out o pending): {data_booking["status"]}\n') or data_booking["status"]
             }
